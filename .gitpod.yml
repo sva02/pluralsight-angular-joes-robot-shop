@@ -5,10 +5,13 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - name: NPM
-    init: npm install && npm run build
-    command: npm run start
-  - name: Angular Cli
+  - name: Install NPM
+    init: npm install
+  - name: Install Angular CLI
     init: npm install -g @angular/cli@16.0.0
+  - name: Run Api-Server
+    command: (cd api-server/; npm run start)
+  - name: Run UI
+    command: npm run start
 
 
